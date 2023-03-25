@@ -1,0 +1,104 @@
+//  Functions
+
+@mixin globals($bx-sizing, $scroll-behavior, $scroll-padding-top) {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: $bx-sizing;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: $scroll-behavior;
+    scroll-padding-top: $scroll-padding-top;
+}
+
+@mixin header($display, $align-itens, $justify-content) {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: $display;
+    align-items: $align-itens;
+    justify-content: $justify-content;
+    padding: 20px 260px;
+    background: $FirstBackgroundBolor;
+    transition: 0.3s linear all;
+}
+
+@mixin a() {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $PrimaryText;
+    transition: 0.2s linear all;
+}
+
+@mixin section($grid-template-columns, $gap, $column-gap) {
+    display: grid;
+    grid-template-columns: $grid-template-columns;
+    gap: $gap;
+    column-gap: $column-gap;
+    margin-top: 4rem;
+    padding: 40px 260px;
+    margin: 0 auto;
+}
+
+@mixin form($display, $align-items) {
+    display: $display;
+    align-items: $align-items;
+    row-gap: 0.4rem;
+    padding: 22px;
+    border-radius: 0.5rem;
+    color: $SecondaryText;
+    background-color: $LightBackground;
+    width: 245px;
+}
+
+@mixin input() {
+    background-color: $LightBackground;
+    border: 1px solid $FourthBackgroundBolor;
+    border-radius: 0.2rem;
+    padding: 4px;
+    width: 200px;
+}
+
+@mixin button() {
+    background: linear-gradient(to left, orange, black);
+    color: $LightBackground;
+    font-weight: 500;
+    border-radius: 0.2rem;
+    padding: 4px;
+    width: 200px;
+    height: 30px;
+    transition: .3s linear all;
+}
+
+@mixin text($color, $font-size, $width, $font-weight) {
+    color: $color;
+    font-size: $font-size;
+    width: $width;
+    font-weight: $font-weight;
+}
+
+@mixin image($width, $border-radius) {
+    width: $width;
+    border-radius: $border-radius;
+}
+
+@mixin icon($font-size) {
+    position: absolute;
+    bottom: 10px;
+    left: -55px;
+    padding: 10px;
+    font-size: $font-size;
+    color: #805d1d;
+}
+
+@mixin social() {
+    font-size: 24px;
+    color: $PrimaryText;
+    border: 2px solid orange;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s linear;
+}
